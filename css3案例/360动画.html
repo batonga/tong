@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/360.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.fullPage.min.js"></script>
+</head>
+<body>
+	<div id="software">
+	    <div class="section first">
+	        <div class="logo">360官方网站</div>
+	        <div class="text">
+	        	<img src="../images/text_1.png">
+	        	<img src="../images/text_2.png">
+	        	<img src="../images/text_3.png">
+	        	<img src="../images/text_4.png">
+	        	<img src="../images/text_5.png">
+	        	<img src="../images/text_6.png">
+	        	<img src="../images/text_7.png">
+	        	<img src="../images/text_8.png">
+	        </div>
+	        <div class="intro"></div>
+	    </div>
+	    <div class="section second">
+	        <div class="shield">
+	        	<img src="../images/shield_1.png">
+	        	<img src="../images/shield_2.png">
+	        	<img src="../images/shield_3.png">
+	        	<img src="../images/shield_4.png">
+	        	<img src="../images/shield_5.png">
+	        	<img src="../images/shield_6.png">
+	        	<img src="../images/shield_7.png">
+	        	<img src="../images/shield_8.png">
+	        	<img src="../images/shield_9.png">				
+	        </div>
+	        <div class="intro"></div>
+	    </div>
+	    <div class="section third">
+	        <div class="intro"></div>
+	        <div class="speed">
+	        	<div class="rocket"></div>
+	        </div>
+	    </div>
+	    <div class="section fourth">
+	        <div class="search">
+	        	<div class="search_bar"></div>
+	        	<div class="text"></div>
+	        	<div class="result"></div>
+	        </div>
+	        <div class="intro"></div>
+	    </div>
+	     <div class="section fifth">
+	        <div class="intro"></div>
+	        <div class="page">
+	        	<div class="toolbar"></div>
+	        	<div class="extra"></div>
+	        	<div class="line_top"></div>
+	        	<div class="line_right"></div>
+	        	<div class="line_bottom"></div>
+	        	<div class="line_left"></div>
+
+	        </div>
+	    </div>
+	</div>
+<script>
+	$(function(){
+    	$('#software').fullpage({
+    		sectionsColor:['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+    		afterLoad:function(anchorLink, index ){
+    			// 清楚current样式
+    			$(".section").removeClass("current");
+    			// 为当前屏添加样式
+    			setTimeout(function(){
+    				$(".section").eq(index-1).addClass("current");
+    			},200)
+    		}
+    	});
+	});
+</script>
+</body>
+</html>
